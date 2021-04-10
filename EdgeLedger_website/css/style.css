@@ -245,3 +245,21 @@ input[type="number"] {
   display: block;
   margin: 0 auto 30px;
 }
+
+/* success */
+.container {
+  height: 68vh;
+}
+.container h2 {
+  text-align: center;
+  padding-top: 30vh;
+  font-size: 2.5rem;
+}
+.container p {
+  text-align: center;
+}
+.container a {
+  width: 7.8rem;
+  display: block;
+  margin: auto;
+}

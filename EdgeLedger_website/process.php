@@ -5,11 +5,10 @@
     $admin_email = "gripify@gmail.com";
     $name = $_POST['name'];
     $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $message = $_POST['message'];
+    $phone = $_POST['number'];
     
     //send email
-    mail($admin_email, "New Form Submission", $message . ' - ' . $phone, "From:" . $email);
+    mail($admin_email, "New Form Submission", ' - ' . $phone, "From:" . $email);
     
     header('Location: success.html');
   }

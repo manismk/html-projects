@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Staatliches&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #c72727;
+  --secondary-color: #f99500;
+  --light-color: #f3f3f3;
+  --dark-color: #333;
+  --max-width: 1100px;
+}
+
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+  background: var(--light-color);
+}
+
+img{
+  width: 100%;
+}
+ul{
+  list-style: none;
+}
+a{
+  color:var(--dark-color);
+  text-decoration: none;
+}
+
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Staatliches',cursive;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+
+
+/* Utilites */
+.container{
+  width: var(--max-width);
+  
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+/* Navigation */
+#main-nav{
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+} 
+
+
+#main-nav .container{
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 6fr 3fr 2fr;
+  align-items: center;
+}
+#main-nav .social i{
+  padding: 0 0.4rem;
+  color: var(--dark-color);
+  transition: color 0.4s ease;
+}
+#main-nav .social i:hover{
+  color: var(--primary-color);
+}
+
+#main-nav .logo {
+  width: 180px;
+}
+
+#main-nav ul {
+  display: flex;
+  justify-self: end;
+  
+}
+
+#main-nav ul li a{
+ 
+  padding:  0.75rem;
+  font-weight: bold;
+  transition: all 0.4s ease;
+
+}
+
+#main-nav ul li a.current{
+  background: var(--primary-color);
+  color: #fff;
+}
+
+#main-nav ul li a:hover{
+  background: var(--light-color);
+  color: var(--dark-color);
+}

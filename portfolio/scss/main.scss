@@ -1,0 +1,90 @@
+@import "config";
+@import "utilites";
+
+//General styles
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Dosis", sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: $dark_color;
+}
+
+ul {
+  list-style: none;
+}
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+}
+
+// header
+#header {
+  &-home {
+    background: $bg-image center right/cover no-repeat;
+    height: 100vh;
+    .header-content {
+      padding-top: 20%;
+      color: #fff;
+      text-align: center;
+      h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+      }
+    }
+  }
+  &-inner {
+  }
+}
+
+// logo
+#logo {
+  width: 70px;
+  height: 70px;
+  color: #fff;
+}
+
+// nav-main
+#nav-main {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  align-items: center;
+
+  ul {
+    display: flex;
+    li {
+      display: inline;
+
+      padding: 1rem 1.5rem;
+
+      a {
+        color: #fff;
+        text-transform: uppercase;
+        border-bottom: 3px transparent solid;
+        padding-bottom: 0.5rem;
+        transition: border-color 0.5s;
+
+        &:hover {
+          border-color: $medium_color;
+        }
+        &.current {
+          border-color: $primary_color;
+        }
+      }
+    }
+  }
+}

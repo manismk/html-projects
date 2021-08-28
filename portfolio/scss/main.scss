@@ -30,7 +30,9 @@ h4 {
 img {
   width: 100%;
 }
-
+.py-2t {
+  padding: 2rem 0;
+}
 // header
 #header {
   &-home {
@@ -47,6 +49,82 @@ img {
     }
   }
   &-inner {
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.icon-with-container {
+  grid-gap: 1.5rem;
+  padding: 0.5rem;
+  div {
+    .fas {
+      padding-bottom: 0.8rem;
+      color: $primary_color;
+      font-size: 2rem;
+      text-align: center;
+      display: block;
+      width: 100%;
+    }
+    h3 {
+      text-align: center;
+      padding-bottom: 0.8rem;
+    }
+    p {
+      font-size: 1.1rem;
+      text-align: center;
+    }
+  }
+}
+
+.process {
+  grid-gap: 1rem;
+  i {
+    background: $dark_color;
+    position: relative;
+    text-align: center;
+    padding: 2rem 2.5rem;
+    font-size: 3.5rem;
+    border-radius: 50%;
+    color: $light_color;
+  }
+}
+.status {
+  background: $medium_color;
+  padding: 2.5rem 0;
+  &:nth-child(odd) {
+    background: $light_color;
+  }
+  i {
+    width: 100%;
+    text-align: center;
+    font-size: 3.5rem;
+    padding-bottom: 0.5rem;
+  }
+  p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .number {
+    padding-top: 1.5rem;
+    font-weight: 600;
+  }
+}
+.headlines {
+  h2 {
+    text-align: center;
+    height: 3rem;
+  }
+  .bottom-line {
+    margin: 0 auto 1rem auto;
+    height: 2px;
+    width: 4rem;
+    background-color: $primary_color;
+  }
+  .lead {
+    padding-bottom: 1rem;
   }
 }
 
@@ -68,9 +146,7 @@ img {
     display: flex;
     li {
       display: inline;
-
       padding: 1rem 1.5rem;
-
       a {
         color: #fff;
         text-transform: uppercase;

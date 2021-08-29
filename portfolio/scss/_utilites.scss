@@ -10,6 +10,18 @@
   transition: all 0.5s;
   cursor: pointer;
 }
+.bg {
+  &-primary {
+    background-color: $primary_color;
+  }
+  &-dark {
+    background-color: $dark_color;
+    color: white;
+  }
+  &-light {
+    background-color: $light_color;
+  }
+}
 .btn {
   &-light {
     @extend %btn-shared;

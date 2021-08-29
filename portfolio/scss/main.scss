@@ -33,6 +33,9 @@ img {
 .py-2t {
   padding: 2rem 0;
 }
+.my-2t {
+  margin: 2rem 0;
+}
 // header
 #header {
   &-home {
@@ -55,9 +58,13 @@ img {
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 1.5rem;
+}
+.grid_without_gap {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .icon-with-container {
-  grid-gap: 1.5rem;
   padding: 0.5rem;
   div {
     .fas {
@@ -80,15 +87,49 @@ img {
 }
 
 .process {
-  grid-gap: 1rem;
-  i {
-    background: $dark_color;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .fas {
     position: relative;
+    background: $dark_color;
+
+    width: 100px;
+    height: 100px;
+
+    line-height: 100px;
     text-align: center;
-    padding: 2rem 2.5rem;
-    font-size: 3.5rem;
+    padding: 2rem;
+    font-size: 3.5em;
     border-radius: 50%;
     color: $light_color;
+    transition: background 1s;
+  }
+  &-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    background: $primary_color;
+    color: $light_color;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 50%;
+    transition: background 0.8s;
+  }
+  .fas:hover {
+    background: $primary_color;
+  }
+  .fas:hover &-icon {
+    background: $dark_color;
+  }
+  p {
+    text-align: center;
   }
 }
 .status {

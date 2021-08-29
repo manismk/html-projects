@@ -38,6 +38,11 @@
     color: $light_color;
     background-color: $dark_color;
   }
+  &-long {
+    display: block;
+    margin: auto;
+    width: 40%;
+  }
 }
 
 button[class^="btn-"]:hover,

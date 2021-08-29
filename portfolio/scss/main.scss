@@ -245,7 +245,73 @@ img {
     border-left: 3px solid $primary_color;
   }
 }
+.form-container {
+  padding: 1rem 0 3rem 0;
+  display: grid;
+  grid-template-areas:
+    "name email"
+    "subject contact"
+    "message message";
+  grid-gap: 1rem;
+  input,
+  textarea {
+    padding: 0.5rem 0.8rem;
+  }
+  textarea {
+    resize: none;
+  }
+  #name {
+    grid-area: name;
+  }
+  #email {
+    grid-area: email;
+  }
+  #message {
+    grid-area: message;
+  }
+  #subject {
+    grid-area: subject;
+  }
+  #contact {
+    grid-area: contact;
+  }
+  input:focus {
+    outline: none;
+    border: 2px solid $primary_color;
+  }
+  textarea:focus {
+    outline: none;
+    border: 2px solid $primary_color;
+  }
+}
 
+.contact-info {
+  .fas {
+    padding-bottom: 0.2rem;
+
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+  .title {
+    padding-bottom: 0.2rem;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  .info {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+}
+.contact-text {
+  background: $primary_color;
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+}
 // logo
 #logo {
   width: 70px;

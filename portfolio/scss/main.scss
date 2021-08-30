@@ -533,14 +533,53 @@ footer {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-
+@media only screen and (max-width: 500px) and (min-height: 500px) {
+  #header {
+    &-home,
+    &-others {
+      background: $bg-image 10% 30% / cover no-repeat;
+      height: 30vh;
+      border-bottom: 3px solid $primary_color;
+    }
+  }
+}
+@media only screen and (max-width: 500px) and (min-height: 300px) {
+  #header {
+    &-home,
+    &-others {
+      background: $bg-image 10% 30% / cover no-repeat;
+      height: 10rem !important;
+      border-bottom: 3px solid $primary_color;
+    }
+  }
+}
 @media only screen and (max-height: 500px) {
+  #header {
+    &-others {
+      background: $bg-image 10% 30% / cover no-repeat;
+      height: 5rem;
+      border-bottom: 3px solid $primary_color;
+    }
+  }
   .header-content {
     padding-top: 8% !important;
+    h1 {
+      font-size: 2rem !important;
+    }
   }
 }
 @media only screen and (max-height: 400px) {
   .header-content {
     padding-top: 2rem !important;
+  }
+}
+@media only screen and (max-height: 300px) {
+  #header-home {
+    background: $bg-image 10% 30% / cover no-repeat;
+    height: 5rem !important;
+    border-bottom: 3px solid $primary_color;
+  }
+  .header-content {
+    display: none;
   }
 }

@@ -45,7 +45,7 @@ img {
     background: $bg-image center right/cover no-repeat;
     height: 100vh;
     .header-content {
-      padding-top: 20%;
+      padding-top: 18%;
       color: #fff;
       text-align: center;
       h1 {
@@ -231,7 +231,7 @@ img {
 
 .profile-container {
   display: grid;
-  grid-template-areas: "about-pic about about about about";
+  grid-template-areas: "about-pic about about about";
   grid-gap: 2rem;
   padding-bottom: 2.5rem;
 
@@ -469,6 +469,78 @@ footer {
 @media only screen and (max-width: 800px) {
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-gap: 1.5rem;
+    grid-gap: 2rem;
+  }
+  .profile-container {
+    grid-template-areas: "about-pic about  ";
+  }
+  .exp-container {
+    img {
+      width: 90% !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .profile-container {
+    grid-template-areas: "about-pic" " about  ";
+  }
+  .grid,
+  .grid_without_gap,
+  .grid-3 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  #nav-main {
+    flex-direction: column;
+    justify-content: center;
+    li {
+      padding: 0.8rem !important;
+    }
+  }
+  #header {
+    &-home,
+    &-others {
+      background: $bg-image 10% 30% / cover no-repeat;
+      height: 30vh;
+      border-bottom: 3px solid $primary_color;
+    }
+  }
+  .header-content {
+    display: none;
+  }
+  footer > div {
+    flex-direction: column;
+    justify-content: center;
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+  .experience {
+    display: none;
+  }
+  .testimonial {
+    img {
+      width: 10% !important;
+    }
+  }
+  .form-container {
+    grid-template-areas:
+      "name" " email"
+      "subject" " contact"
+      "message";
+  }
+  .items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (max-height: 500px) {
+  .header-content {
+    padding-top: 8% !important;
+  }
+}
+@media only screen and (max-height: 400px) {
+  .header-content {
+    padding-top: 2rem !important;
   }
 }

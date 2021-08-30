@@ -150,7 +150,8 @@ img {
   .fas:hover &-icon {
     background: $dark_color;
   }
-  p {
+  p,
+  h3 {
     text-align: center;
   }
 }
@@ -462,5 +463,12 @@ footer {
   }
   a:hover i {
     background: $primary_color;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 1.5rem;
   }
 }
